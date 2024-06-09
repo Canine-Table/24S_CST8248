@@ -1,0 +1,10 @@
+[Unit]
+Description=My custom ip commands service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /usr/local/bin/interfaces.sh
+
+[Install]
+WantedBy=multi-user.target
